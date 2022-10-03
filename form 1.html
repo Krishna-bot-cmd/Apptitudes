@@ -1,0 +1,124 @@
+ <html>
+  <head>
+ <meta http-equiv="refresh" >
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+  <link rel="icon" type="image/gif" size="20X20" href="RVS copy.png">
+  <link rel="stylesheet" type="text/css" href="registeration.css">
+ </head>
+ <title> RVS techcampus-cbe</title>
+<body oncontextmenu="return false">
+<div class="v-header container">
+    <div class="video-warp">
+<video id="video-bg" preload="auto" autoplay="true" loop="loop" muted="muted">
+<source src="video.mov" type="video/mp4">
+video not supported
+</video>
+</div>
+<div class="overit">
+<div class="content">
+<div class="logo">
+<img src="RVS copy.png">
+</div>
+<div class="row">
+ <div class="main-nav">
+ <ul>
+ <li> <a href="homepag.html ">Home</a> </li>
+ <li> <a href=" login.html">Login</a> </li>
+ <li class="active"> <a href="">signup</a> </li>
+ <div class="dropdown"> <div class="dropbtn"><li> <a href="#" onclick="myFunction1();">Tests</a> 
+ <div id="snackbar">login soon..</div></li>
+	 <i class="fa fa-caret-down"/>
+	 <div class="dropdown-content">
+	 <a href="" onclick="myFunction1();">Apptitude</a>
+	 <a href="" onclick="myFunction1();">Verbal</a>
+	 <a href="" onclick="myFunction1();">Communication</a>
+	 </div>
+	 </div>
+	 </div>
+<li> <span id="55" onclick="opena()"> Quries</span> </li>
+ </ul>
+ </div>
+ </div> 
+ </div>
+ <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closea()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a><span onclick="openNav1(); closea();" >Contact</span></a>
+  </div>
+</div>
+<div id="myNav1" class="overlay" align="center" >
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+ <div class="contact-title">
+ <h1>Contact Form</h1>
+ <h3>We are always redy to serve you !</h3>
+ <div class="cf">
+ <form id="cf" enctype="text/plain">
+    <input name="name" type="type" autocomplete="off" class="form" placeholder="NAME" required><br/>
+    <input name="email" autocomplete="off" type="email" class="form" placeholder="EMAIL ID" required><br/>
+    <textarea name="message" class="form" placeholder="Feedback" rows="4" requuired></textarea><br/>
+    <input type="submit" class="form S" value="SEND TO"> 
+ </form></div>
+ </div>
+ </div>
+  <div class="registor-box">
+ <h1> Registerr </h1>
+ <form method="post" action="insert.php">
+ <?php include('error.css');?>
+  <div class="header">
+  <label>UserName</label>
+ <input type="text"name="UserName"id="username" placeholder="Enter your NAME " autocomplete="off" pattern="(?=.*[A-Z])(?=.*[a-z]).{3,}" title="minimum 3 or more charachter & first letter must be at caps" required>
+    <img class="UI "src="7.png"  width="32em"height="32em">
+	<div id= "message-box">
+     <h3> UserName must contain</h3>
+	 <p id="length" class="invalid">minimum<b> 3 characters</b></p>
+	 </div>
+  <div class="input-group">
+  <label>Gender</label>
+  <div class="option">
+  <select class="select" name="option" Required>
+  <option class="value" value="" disabled selected>choose your option</option>
+  <option class="value"   value="m">Male</option>
+  <option class="value"  value="f">Female</option>
+  </select><br/>
+  <form class="pure-form">
+  <label>password</label>
+  <input type="password" placeholder="Enter the password" onkeyup="function()"id="psw" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast (1)num(1)uprcase(1)symbol&(1)lwrcase minimum 8 or more charachter" required >
+ <button onmouseleave="if (password.type == 'text') password.type = 'password';" onmouseover=" password.type = 'text';"><img class="imge"src="5.png"  width="32em"height="32em"></button>
+  <p id="text">WARNING! Caps lock is ON.</p>
+  <script src= "script.js">  </script> 
+  <label for="phonenum">Phone Number (format:2-2-6)</label><br/>
+  <select class="sle" name="phone" Required>
+  <option value="" disabled selected>phone code</option>
+  <option value="">+91</option>
+  <option value="">+1</option>
+  <option value="">+12</option>
+  </select>
+ <input id="phonenum" type="tel" name="phn" pattern="^\d{2}-\d{2}-\d{6}$"  placeholder="enter your number based on the above format" required >
+ </form>
+		 <div class="input-group">
+     <label>Department</label>
+     <input type="text" onblur="myFunction4()"id="dept" name="Department"placeholder="only in caps -- your department" autocomplete="off" pattern="(?=.*[A-Z]).{3}" title="minimum 3 or more charachter" required>
+     <a class="33" target="_blank" href="https://www.btechguru.com/termsAndConditions.php" > I Accept to this Terms And  Conditions.<input type="checkbox" name="chk_agree" value="" class="cb" autocomplete="off"></a>
+	 <input type="submit"name="submit" class="pure-button-pure-button-primary" value="get me remembered"   onclick="validatePassword(); openc(); "><br/>
+	 <div id= "message-box">
+     <h3> Password must contain the following</h3>
+	 <p id="letter" class="invalid">A<b>lowercase</b> letter</p>
+	 <p id="capital" class="invalid">A<b>uppercase</b> letter</p>
+	 <p id="number" class="invalid">A<b>number</b></p>
+	 <p id="length" class="invalid">minimum<b>8 characters</b></p>
+	 </div>
+     <p> no need  <a href="login.html"> "login" </a>
+     </p>
+	 </div>
+	 </div>
+	 </div>
+     </div>
+      </form>
+	 </div>
+	 </div>
+    </div>
+     </body>
+ </html>
